@@ -15,7 +15,7 @@ for i in */; do
     e="${j##*.}" # file extension
 
     if [[ $e = "mp3" || $e = "flac" || $e = "opus" ]]; then
-      echo "[INFO] file /$j"
+      echo "[INFO] file $i$j"
 
       d=${j%.*} # filename with no extension
       f=$(echo ${j%%-*} | xargs) # chars up to first "-" with whitespace trimmed
