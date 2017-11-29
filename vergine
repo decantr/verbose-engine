@@ -30,7 +30,7 @@ for i in */; do
       fi
 
       echo "[INFO] encoding $d.$b"
-      ffmpeg -hide_banner -y -v 24 -i "$j" -c:a libmp3lame -q:a 5 -vn "$d.$b"
+      ffmpeg -hide_banner -n -v 24 -i "$j" -c:a libmp3lame -q:a 5 -vn "$d.$b"
 
       mv "$j" "$j.old"
 
