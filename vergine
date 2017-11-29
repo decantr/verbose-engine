@@ -34,7 +34,7 @@ for i in */; do
 
       if [[ ${d:0:1} = "z" ]]; then
         echo "[INFO] renaming '$i$d.$b' to '${d#*z}.$b'"
-        mv "$i$d.$b" "${d#*z}.$b"
+        mv "$d.$b" "${d#*z}.$b"
       fi
 
       # a=${j:1}
