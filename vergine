@@ -37,8 +37,6 @@ for i in */; do
         mv "$d.$b" "${d#*z}.$b"
       fi
 
-      # a=${j:1}
-      # mv "$j" "$a"
     else
       echo "[WARN] skipping '$i$j'"
     fi
