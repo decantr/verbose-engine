@@ -45,6 +45,6 @@ for i in */; do
   done
   cd ..
 done
-#
-# sleep 1
-# picard .
+
+sleep 1
+picard .
