@@ -1,12 +1,15 @@
 #!/bin/bash
 
-a=$1 # name of the band
-b=$2 # file ext to encode to
-
-if [[ $3 ]]; then
+if [[ -z $1 || -z $2 ]]; then
+  echo "[FATAL] please encase band name in quotes"
+  exit
+elif [[ $3 ]]; then
   echo "[FATAL] please encase band name in quotes"
   exit
 fi
+
+a=$1 # name of the band
+b=$2 # file ext to encode to
 
 for i in */; do
   cd "$i" || return
