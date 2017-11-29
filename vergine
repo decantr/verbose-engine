@@ -32,6 +32,8 @@ for i in */; do
       echo "[INFO] encoding $d.$b"
       ffmpeg -hide_banner -y -v 24 -i "$j" -c:a libmp3lame -q:a 5 -vn "$d.$b"
 
+      mv "$j" "$j.old"
+
       if [[ ${d:0:1} = "z" ]]; then
         echo "[INFO] renaming '$i$d.$b' to '${d#*z}.$b'"
         mv "$d.$b" "${d#*z}.$b"
